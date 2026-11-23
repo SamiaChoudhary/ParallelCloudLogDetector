@@ -3,4 +3,5 @@ public class LogEntry {
 	public int failedAttempts;
 	public int intervalMs;
 	public String status;
+	public boolean isPoisonPill;
 }
