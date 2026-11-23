@@ -11,4 +11,7 @@ public class LogEntry {
         this.status = status;
         this.isPoisonPill = false;
     }
+	public LogEntry(boolean isPoisonPill) {
+        this.isPoisonPill = isPoisonPill;
+    }
 }
