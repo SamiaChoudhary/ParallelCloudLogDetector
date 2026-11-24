@@ -40,5 +40,11 @@ public double getAverageIntervalMs() {
     return averageIntervalMs;
 }
 
+public boolean isBlocked() {
+    return blocked;
+}
 
+public double getRiskScore() {
+    return riskScore;
+}
 }
