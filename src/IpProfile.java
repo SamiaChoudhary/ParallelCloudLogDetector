@@ -32,5 +32,9 @@ public int getSuccessfulLogins() {
 public long getLastSeenTimestamp() {
     return lastSeenTimestamp;
 }
+public double getAverageIntervalMs() {
+    return averageIntervalMs;
+}
+
 
 }
