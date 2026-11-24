@@ -4,5 +4,5 @@ import java.io.IOException;
 import java.util.Random;
 public class LogGenerator {
     public static void main(String[] args) {
-    }
+    	String filePath = "cloud_logs.csv";}
 }
