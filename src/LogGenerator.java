@@ -8,5 +8,10 @@ public class LogGenerator {
     	final int TOTAL_LOGS = 500000;
     	final int ATTACK_PERCENTAGE = 5;
         Random rand = new Random();
-    	}
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            writer.write("IP_Address,Failed_Attempts,Interval_Ms,Status\n");
+        } catch (IOException e) {
+            System.err.println("Error generating logs: " + e.getMessage());
+        }	
+    }
 }
