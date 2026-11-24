@@ -29,4 +29,7 @@ public class ThreatAlert {
     public String getThreatType() {
         return threatType;
     }
+    public String getSeverity() {
+        return severity;
+    }
 }
