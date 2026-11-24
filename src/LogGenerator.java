@@ -15,7 +15,15 @@ public class LogGenerator {
             String ip;
             int failedAttempts;
             int intervalMs;
-            String status;}
+            String status;
+            
+            if (rand.nextInt(100) < ATTACK_PERCENTAGE) {
+                ip = "192.168.1." + (100 + rand.nextInt(15));
+                failedAttempts = 12 + rand.nextInt(30);
+                intervalMs = 15 + rand.nextInt(80);
+                status = "FAILED";
+            }
+        }
     
         catch (IOException e) {
             System.err.println("Error generating logs: " + e.getMessage());
