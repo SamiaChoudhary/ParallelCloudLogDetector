@@ -50,5 +50,9 @@ public class ThreatAlert {
     public String toCsvRow() {
         return String.join(",", alertId, sourceIp, threatType, severity, String.valueOf(failedCount), String.valueOf(riskScore), timestamp);
     }
-    
+    @Override
+    public String toString() {
+        return "[" + severity + "] " + threatType + " from " + sourceIp + " (Score: " + riskScore + ")";
+    }
+   
 }
