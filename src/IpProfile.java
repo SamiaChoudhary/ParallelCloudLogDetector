@@ -20,40 +20,6 @@ public IpProfile(String ipAddress) {
 public String getIpAddress() {
     return ipAddress;
 }
-public int getTotalAttempts() {
-    return totalAttempts;
-}
-public int getFailedAttempts() {
-    return failedAttempts;
-}
-public int getSuccessfulLogins() {
-    return successfulLogins;
-}
-public long getLastSeenTimestamp() {
-    return lastSeenTimestamp;
-}
-public double getAverageIntervalMs() {
-    return averageIntervalMs;
-}
-public boolean isBlocked() {
-    return blocked;
-}
-public double getRiskScore() {
-    return riskScore;
-}
-public void recordAttempt(boolean isFailed, int intervalMs) {
-    if (this.totalAttempts == 0) {
-        this.averageIntervalMs = intervalMs;
-    } else {
-        this.averageIntervalMs = ((this.averageIntervalMs * this.totalAttempts) + intervalMs) / (this.totalAttempts + 1);
-    }
-    this.totalAttempts++;
-    if (isFailed) {
-        this.failedAttempts++;
-    } else {
-        this.successfulLogins++;
-    }
-    this.lastSeenTimestamp = System.currentTimeMillis();
-}
+
 
 }
