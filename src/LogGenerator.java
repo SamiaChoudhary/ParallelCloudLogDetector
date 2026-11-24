@@ -23,6 +23,12 @@ public class LogGenerator {
                 intervalMs = 15 + rand.nextInt(80);
                 status = "FAILED";
             }
+            else {
+                ip = "10.0." + rand.nextInt(255) + "." + rand.nextInt(255);
+                failedAttempts = rand.nextInt(4);
+                intervalMs = 500 + rand.nextInt(5000);
+                status = (failedAttempts > 2) ? "FAILED" : "SUCCESS";
+            }
         }
     
         catch (IOException e) {
