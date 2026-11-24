@@ -23,6 +23,8 @@ public String getIpAddress() {
 public int getTotalAttempts() {
     return totalAttempts;
 }
-
+public int getFailedAttempts() {
+    return failedAttempts;
+}
 
 }
