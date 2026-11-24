@@ -38,6 +38,9 @@ public class ThreatAlert {
     public String getTimestamp() {
         return timestamp;
     }
+    public boolean isAcknowledged() {
+        return acknowledged;
+    }
     
     
     
