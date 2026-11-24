@@ -26,5 +26,9 @@ public int getTotalAttempts() {
 public int getFailedAttempts() {
     return failedAttempts;
 }
+public int getSuccessfulLogins() {
+    return successfulLogins;
+}
+
 
 }
