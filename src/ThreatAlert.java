@@ -23,4 +23,7 @@ public class ThreatAlert {
     public String getAlertId() {
         return alertId;
     }
+    public String getSourceIp() {
+        return sourceIp;
+    }
 }
