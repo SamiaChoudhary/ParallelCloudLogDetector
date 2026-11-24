@@ -26,4 +26,7 @@ public class ThreatAlert {
     public String getSourceIp() {
         return sourceIp;
     }
+    public String getThreatType() {
+        return threatType;
+    }
 }
