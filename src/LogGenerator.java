@@ -10,7 +10,14 @@ public class LogGenerator {
         Random rand = new Random();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             writer.write("IP_Address,Failed_Attempts,Interval_Ms,Status\n");
-        } catch (IOException e) {
+        }
+        for (int i = 0; i < TOTAL_LOGS; i++) {
+            String ip;
+            int failedAttempts;
+            int intervalMs;
+            String status;}
+    
+        catch (IOException e) {
             System.err.println("Error generating logs: " + e.getMessage());
         }	
     }
