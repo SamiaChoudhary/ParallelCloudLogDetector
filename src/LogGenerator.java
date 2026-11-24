@@ -29,6 +29,7 @@ public class LogGenerator {
                 intervalMs = 500 + rand.nextInt(5000);
                 status = (failedAttempts > 2) ? "FAILED" : "SUCCESS";
             }
+            writer.write(ip + "," + failedAttempts + "," + intervalMs + "," + status + "\n");
         }
     
         catch (IOException e) {
