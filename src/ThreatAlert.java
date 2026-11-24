@@ -32,4 +32,7 @@ public class ThreatAlert {
     public String getSeverity() {
         return severity;
     }
+    public int getFailedCount() {
+        return failedCount;
+    }
 }
