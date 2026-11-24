@@ -42,5 +42,10 @@ public double getRiskScore() {
     return riskScore;
 }
 public void recordAttempt(boolean isFailed, int intervalMs) {
-}
-}
+    if (this.totalAttempts == 0) {
+        this.averageIntervalMs = intervalMs;
+    } else {
+        this.averageIntervalMs = ((this.averageIntervalMs * this.totalAttempts) + intervalMs) / (this.totalAttempts + 1);
+    }
+   
+}}
