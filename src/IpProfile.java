@@ -3,5 +3,6 @@ public class IpProfile {
 	private int totalAttempts;
 	private int successfulLogins;
 	private long lastSeenTimestamp;
+    private double averageIntervalMs;
     
 }
