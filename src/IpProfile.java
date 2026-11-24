@@ -47,5 +47,13 @@ public void recordAttempt(boolean isFailed, int intervalMs) {
     } else {
         this.averageIntervalMs = ((this.averageIntervalMs * this.totalAttempts) + intervalMs) / (this.totalAttempts + 1);
     }
-   
-}}
+    this.totalAttempts++;
+    if (isFailed) {
+        this.failedAttempts++;
+    } else {
+        this.successfulLogins++;
+    }
+    this.lastSeenTimestamp = System.currentTimeMillis();
+}
+
+}
