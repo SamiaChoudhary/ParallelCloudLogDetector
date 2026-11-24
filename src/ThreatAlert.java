@@ -47,6 +47,8 @@ public class ThreatAlert {
     public boolean isCritical() {
         return "CRITICAL".equalsIgnoreCase(this.severity) || this.riskScore >= 85.0;
     }
-    
+    public String toCsvRow() {
+        return String.join(",", alertId, sourceIp, threatType, severity, String.valueOf(failedCount), String.valueOf(riskScore), timestamp);
+    }
     
 }
