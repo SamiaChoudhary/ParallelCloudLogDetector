@@ -41,6 +41,9 @@ public class ThreatAlert {
     public boolean isAcknowledged() {
         return acknowledged;
     }
+    public void markAcknowledged() {
+        this.acknowledged = true;
+    }
     
     
     
