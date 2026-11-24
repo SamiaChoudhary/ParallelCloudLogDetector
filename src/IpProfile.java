@@ -35,6 +35,8 @@ public long getLastSeenTimestamp() {
 public double getAverageIntervalMs() {
     return averageIntervalMs;
 }
-
+public boolean isBlocked() {
+    return blocked;
+}
 
 }
