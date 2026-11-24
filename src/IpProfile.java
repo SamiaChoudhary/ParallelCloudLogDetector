@@ -5,5 +5,8 @@ public class IpProfile {
 	private long lastSeenTimestamp;
     private double averageIntervalMs;
     private boolean blocked;
+    private double riskScore;
+}
+public IpProfile(String ipAddress) {
     
 }
