@@ -20,4 +20,8 @@ public IpProfile(String ipAddress) {
 public String getIpAddress() {
     return ipAddress;
 }
+public int getTotalAttempts() {
+    return totalAttempts;
+}
+
 }
