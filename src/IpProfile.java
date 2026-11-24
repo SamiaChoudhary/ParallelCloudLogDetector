@@ -23,28 +23,24 @@ public String getIpAddress() {
 public int getTotalAttempts() {
     return totalAttempts;
 }
-
 public int getFailedAttempts() {
     return failedAttempts;
 }
-
 public int getSuccessfulLogins() {
     return successfulLogins;
 }
-
 public long getLastSeenTimestamp() {
     return lastSeenTimestamp;
 }
-
 public double getAverageIntervalMs() {
     return averageIntervalMs;
 }
-
 public boolean isBlocked() {
     return blocked;
 }
-
 public double getRiskScore() {
     return riskScore;
+}
+public void recordAttempt(boolean isFailed, int intervalMs) {
 }
 }
