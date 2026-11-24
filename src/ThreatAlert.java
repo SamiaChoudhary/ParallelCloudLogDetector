@@ -20,4 +20,7 @@ public class ThreatAlert {
         this.timestamp = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
         this.acknowledged = false;
     }
+    public String getAlertId() {
+        return alertId;
+    }
 }
