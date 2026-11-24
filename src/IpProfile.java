@@ -29,6 +29,8 @@ public int getFailedAttempts() {
 public int getSuccessfulLogins() {
     return successfulLogins;
 }
-
+public long getLastSeenTimestamp() {
+    return lastSeenTimestamp;
+}
 
 }
