@@ -35,4 +35,10 @@ public class ThreatAlert {
     public int getFailedCount() {
         return failedCount;
     }
+    public String getTimestamp() {
+        return timestamp;
+    }
+    
+    
+    
 }
