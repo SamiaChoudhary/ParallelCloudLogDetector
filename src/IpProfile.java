@@ -4,5 +4,6 @@ public class IpProfile {
 	private int successfulLogins;
 	private long lastSeenTimestamp;
     private double averageIntervalMs;
+    private boolean blocked;
     
 }
