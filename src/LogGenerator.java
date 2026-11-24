@@ -1,4 +1,1 @@
-
-public class LogGenerator {
-
-}
+import java.io.BufferedWriter;
