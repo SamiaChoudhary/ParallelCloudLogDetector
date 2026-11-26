@@ -10,5 +10,8 @@ public class BruteForceRuleTest {
         LogEntry failedEntry = new LogEntry("FAILED_LOGIN", 1000L);
         IpProfile belowThresholdProfile = new IpProfile(500L, 4);
         assert !rule.evaluate(failedEntry, belowThresholdProfile);
+
+        IpProfile exactThresholdProfile = new IpProfile(500L, 5);
+        assert rule.evaluate(failedEntry, exactThresholdProfile);
     }
 }
