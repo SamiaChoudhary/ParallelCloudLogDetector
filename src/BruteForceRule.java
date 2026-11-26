@@ -5,6 +5,9 @@ public class BruteForceRule {
 		if (entry == null || profile == null) {
             return false;
         }
+		if (!"FAILED_LOGIN".equals(entry.getEventType())) {
+            return false;
+        }
         return false;
     }
 
