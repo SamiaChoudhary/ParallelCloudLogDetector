@@ -11,6 +11,13 @@ public class BruteForceRule {
 
     private static final String FAILED_LOGIN_EVENT = "FAILED_LOGIN";
 
+    /**
+     * Evaluates whether the incoming log entry and IP profile indicate a brute-force attack.
+     *
+     * @param entry   current log event
+     * @param profile tracking profile for the source IP
+     * @return {@code true} if brute-force threshold is met inside the time window, otherwise {@code false}
+     */
     public boolean evaluate(LogEntry entry, IpProfile profile) {
         if (entry == null || profile == null) {
             return false;
