@@ -33,6 +33,11 @@ public class BruteForceRule {
                 && profile.getFailedAttempts() >= MAX_FAILED_ATTEMPTS;
     }
 
+    /**
+     * Returns the identifier name of this detection rule.
+     *
+     * @return rule name string
+     */
     public String getRuleName() {
         return "BRUTE_FORCE_DETECTION";
     }
