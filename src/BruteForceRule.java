@@ -1,5 +1,9 @@
+/**
+ * Detects brute-force login attempts from a source IP within a configured time window.
+ */
 public class BruteForceRule {
 
+    /** Minimum failed login attempts required to trigger brute-force detection. */
     private static final int MAX_FAILED_ATTEMPTS = 5;
     private static final long TIME_WINDOW_MS = 60000;
     private static final String FAILED_LOGIN_EVENT = "FAILED_LOGIN";
@@ -12,6 +16,7 @@ public class BruteForceRule {
         if (!FAILED_LOGIN_EVENT.equalsIgnoreCase(entry.getEventType())) {
             return false;
         }
+
         long elapsedTimeMs = entry.getTimestamp() - profile.getFirstAttemptTime();
         return elapsedTimeMs >= 0
                 && elapsedTimeMs <= TIME_WINDOW_MS
