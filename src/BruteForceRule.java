@@ -9,8 +9,7 @@ public class BruteForceRule {
         if (!"FAILED_LOGIN".equalsIgnoreCase(entry.getEventType())) {
             return false;
         }
-        long currentTime = entry.getTimestamp();
-        long firstAttemptTime = profile.getFirstAttemptTime();
+        long timeDiff = entry.getTimestamp() - profile.getFirstAttemptTime();
         return false;
     }
 }
