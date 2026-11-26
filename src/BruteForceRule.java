@@ -12,4 +12,8 @@ public class BruteForceRule {
         long timeDiff = entry.getTimestamp() - profile.getFirstAttemptTime();
         return profile.getFailedAttempts() >= MAX_FAILED_ATTEMPTS && timeDiff <= TIME_WINDOW_MS;
     }
+
+    public String getRuleName() {
+        return "";
+    }
 }
