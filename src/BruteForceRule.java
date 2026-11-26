@@ -5,7 +5,10 @@ public class BruteForceRule {
 
     /** Minimum failed login attempts required to trigger brute-force detection. */
     private static final int MAX_FAILED_ATTEMPTS = 5;
+
+    /** Time window in milliseconds within which failed attempts must occur. */
     private static final long TIME_WINDOW_MS = 60000;
+
     private static final String FAILED_LOGIN_EVENT = "FAILED_LOGIN";
 
     public boolean evaluate(LogEntry entry, IpProfile profile) {
