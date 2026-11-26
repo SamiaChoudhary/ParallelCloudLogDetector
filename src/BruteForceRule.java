@@ -12,7 +12,6 @@ public class BruteForceRule {
         if (!FAILED_LOGIN_EVENT.equalsIgnoreCase(entry.getEventType())) {
             return false;
         }
-
         long elapsedTimeMs = entry.getTimestamp() - profile.getFirstAttemptTime();
         return elapsedTimeMs >= 0
                 && elapsedTimeMs <= TIME_WINDOW_MS
