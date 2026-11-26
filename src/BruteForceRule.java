@@ -10,8 +10,8 @@ public class BruteForceRule {
         if (!FAILED_LOGIN_EVENT.equalsIgnoreCase(entry.getEventType())) {
             return false;
         }
-        long timeDiff = entry.getTimestamp() - profile.getFirstAttemptTime();
-        return profile.getFailedAttempts() >= MAX_FAILED_ATTEMPTS && timeDiff <= TIME_WINDOW_MS;
+        long elapsedTimeMs = entry.getTimestamp() - profile.getFirstAttemptTime();
+        return profile.getFailedAttempts() >= MAX_FAILED_ATTEMPTS && elapsedTimeMs <= TIME_WINDOW_MS;
     }
 
     public String getRuleName() {
