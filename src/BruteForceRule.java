@@ -14,6 +14,6 @@ public class BruteForceRule {
     }
 
     public String getRuleName() {
-        return "";
+        return "BRUTE_FORCE_DETECTION";
     }
 }
