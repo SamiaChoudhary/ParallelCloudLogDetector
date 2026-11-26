@@ -11,10 +11,9 @@ public class BruteForceRule {
             return false;
         }
         long elapsedTimeMs = entry.getTimestamp() - profile.getFirstAttemptTime();
-        if (elapsedTimeMs < 0) {
-            return false;
-        }
-        return profile.getFailedAttempts() >= MAX_FAILED_ATTEMPTS && elapsedTimeMs <= TIME_WINDOW_MS;
+        return elapsedTimeMs >= 0
+                && elapsedTimeMs <= TIME_WINDOW_MS
+                && profile.getFailedAttempts() >= MAX_FAILED_ATTEMPTS;
     }
 
     public String getRuleName() {
