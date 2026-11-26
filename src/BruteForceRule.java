@@ -10,6 +10,6 @@ public class BruteForceRule {
             return false;
         }
         long timeDiff = entry.getTimestamp() - profile.getFirstAttemptTime();
-        return false;
+        return profile.getFailedAttempts() >= MAX_FAILED_ATTEMPTS;
     }
 }
