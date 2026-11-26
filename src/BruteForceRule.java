@@ -10,6 +10,7 @@ public class BruteForceRule {
             return false;
         }
         long currentTime = entry.getTimestamp();
+        long firstAttemptTime = profile.getFirstAttemptTime();
         return false;
     }
 }
