@@ -4,5 +4,8 @@ public class CredentialStuffingRule {
 	public boolean evaluate(LogEntry entry, IpProfile profile) {
 		
 	}
+	public String getRuleName() {
+        return "CREDENTIAL_STUFFING";
+    }
 
 }
