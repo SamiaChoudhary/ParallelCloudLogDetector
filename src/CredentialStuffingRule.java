@@ -1,3 +1,6 @@
+/**
+ * Detects credential stuffing attacks based on unique username and failed attempt thresholds.
+ */
 public class CredentialStuffingRule {
     private static final String RULE_NAME = "CREDENTIAL_STUFFING";
     private static final int UNIQUE_USER_THRESHOLD = 10;
