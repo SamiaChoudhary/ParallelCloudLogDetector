@@ -1,5 +1,5 @@
 public class CredentialStuffingRule {
-    private static final int UNIQUE_USER_THRESHOLD = 7;
+    private static final int UNIQUE_USER_THRESHOLD = 8;
 
     public boolean evaluate(LogEntry entry, IpProfile profile) {
         if (entry == null || profile == null) {
