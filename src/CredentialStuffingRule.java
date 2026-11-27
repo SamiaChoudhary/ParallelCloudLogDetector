@@ -6,12 +6,15 @@ public class CredentialStuffingRule {
         if (entry == null || profile == null) {
             return false;
         }
-        return hasEnoughUniqueUsers(profile)
-                && profile.getFailedAttempts() >= UNIQUE_USER_THRESHOLD;
+        return hasEnoughUniqueUsers(profile) && hasEnoughFailedAttempts(profile);
     }
 
     private boolean hasEnoughUniqueUsers(IpProfile profile) {
         return profile.getUniqueUsernamesAttempted() >= UNIQUE_USER_THRESHOLD;
+    }
+
+    private boolean hasEnoughFailedAttempts(IpProfile profile) {
+        return profile.getFailedAttempts() >= UNIQUE_USER_THRESHOLD;
     }
 
     public String getRuleName() {
