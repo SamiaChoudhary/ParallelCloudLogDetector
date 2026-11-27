@@ -5,6 +5,9 @@ public class CredentialStuffingRule {
     private static final String RULE_NAME = "CREDENTIAL_STUFFING";
     private static final int UNIQUE_USER_THRESHOLD = 10;
 
+    /**
+     * Evaluates whether the given log entry and IP profile indicate credential stuffing.
+     */
     public boolean evaluate(LogEntry entry, IpProfile profile) {
         if (entry == null || profile == null) {
             return false;
