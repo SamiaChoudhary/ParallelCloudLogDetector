@@ -5,7 +5,7 @@ public class CredentialStuffingRule {
         if (entry == null || profile == null) {
             return false;
         }
-        return false;
+        return profile.getUniqueUsernamesAttempted() >= UNIQUE_USER_THRESHOLD;
     }
 
     public String getRuleName() {
